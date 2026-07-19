@@ -249,14 +249,21 @@ a {
 .company-logo {
   width: auto;
   height: auto;
-  max-width: min(230px, 85%);
-  max-height: 60px;
+  max-width: 100%;
   object-fit: contain;
   object-position: left center;
 }
 
+.company-logo.rangeway {
+  width: min(230px, 100%);
+}
+
+.company-logo.chargevia {
+  width: min(282px, 100%);
+}
+
 .company-logo.ampiq {
-  max-height: 64px;
+  width: min(170px, 100%);
 }
 
 .company-body p {

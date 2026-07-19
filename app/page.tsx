@@ -18,8 +18,8 @@ const portfolio = [
     imageWidth: 640,
     imageHeight: 360,
     logo: "/brands/rangeway-lockup.svg",
-    logoWidth: 250,
-    logoHeight: 58,
+    logoWidth: 240,
+    logoHeight: 56,
     featured: true,
   },
   {
@@ -32,8 +32,8 @@ const portfolio = [
     imageWidth: 1760,
     imageHeight: 982,
     logo: "/brands/chargevia-lockup.svg",
-    logoWidth: 250,
-    logoHeight: 58,
+    logoWidth: 320,
+    logoHeight: 60,
   },
   {
     id: "CM / 03",
@@ -47,8 +47,8 @@ const portfolio = [
     imageWidth: 1672,
     imageHeight: 941,
     logo: "/brands/ampiq-logo.png",
-    logoWidth: 250,
-    logoHeight: 79,
+    logoWidth: 861,
+    logoHeight: 267,
   },
 ] as const;
 
