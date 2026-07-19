@@ -78,3 +78,24 @@ test("uses browser-native images so the local vinext preview has no image-servic
   assert.doesNotMatch(page, /<Image\b/);
   assert.match(page, /<img\b/);
 });
+
+test("implements the supplied Current Mile Group brand system", async () => {
+  const [page, layout, css] = await Promise.all([
+    readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/layout.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(page, /cmg-lockup-for-dark\.png/);
+  assert.match(page, /cmg-monogram-for-dark\.png/);
+  assert.match(page, /className="portfolio-baseline"/);
+  assert.match(layout, /Archivo, IBM_Plex_Mono/);
+  assert.match(layout, /cmg-favicon-16-divider\.svg/);
+  assert.match(layout, /cmg-social-512\.png/);
+  assert.match(css, /--ink: #1a1c19/);
+  assert.match(css, /--off-white: #f0ece3/);
+  assert.match(css, /--oxide: #b0552d/);
+  assert.match(css, /--slate: #5b6058/);
+  assert.match(css, /--bone: #d8d2c4/);
+  assert.doesNotMatch(css, /--moss|--rust|--clay|font-geist/);
+});

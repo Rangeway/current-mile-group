@@ -19,9 +19,11 @@ There is no blog, separate interior page, contact form, or decorative folio rail
 
 ## Visual Direction
 
-Use the selected “Field Atlas” layout with the sharper “Mile Index” voice. The visual system combines dark moss, warm mineral paper, rust and clay accents, strong editorial typography, restrained field-document notation, and real portfolio imagery. It should feel grounded, operator-led, premium, durable, and connected to the physical world.
+Use the approved Current Mile Group “Datum Line” identity while preserving the selected editorial layout and sharper “Mile Index” voice. The official palette is Ink (`#1A1C19`), Off-White (`#F0ECE3`), Oxide (`#B0552D`), Slate (`#5B6058`), and Bone (`#D8D2C4`). Archivo is used for display, headings, interface text, and running copy; IBM Plex Mono is reserved for captions, figures, and labels. The measured-baseline rule with tick marks indexes content throughout the page. The supplied CMG lockup, monogram, favicon, app icon, and social asset are the source of truth.
 
-Avoid generic venture-capital aesthetics, synthetic futurism, corporate stock design, ornamental maps, excessive metadata, and invented logo symbols. The Current Mile Group identity remains a clean typographic placeholder until a final brand system is approved.
+The identity should feel grounded, operator-led, premium, durable, and connected to the physical world. Ink and Off-White do nearly all the work. Oxide is punctuation rather than a dominant surface color.
+
+Avoid generic venture-capital aesthetics, synthetic futurism, corporate stock design, ornamental maps, excessive metadata, invented logo symbols, gradients, outlines, shadows, and skewed versions of the mark. Never restyle the portfolio-company logos to match Current Mile Group.
 
 ## Content and Claims
 

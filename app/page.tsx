@@ -89,8 +89,22 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="wordmark" href="#top" aria-label="Current Mile Group home">
-          Current Mile Group
+        <a className="brand-home" href="#top" aria-label="Current Mile Group home">
+          <img
+            className="brand-lockup"
+            src="/brand/cmg-lockup-for-dark.png"
+            alt="Current Mile Group"
+            width="1536"
+            height="585"
+          />
+          <img
+            className="brand-monogram"
+            src="/brand/cmg-monogram-for-dark.png"
+            alt=""
+            width="1074"
+            height="420"
+            aria-hidden="true"
+          />
         </a>
         <nav aria-label="Primary navigation">
           <a href="#portfolio">Portfolio</a>
@@ -109,7 +123,11 @@ export default function Home() {
             It is energy, software, infrastructure, hospitality, and the choices
             that make movement work.
           </p>
-          <span className="hero-rule" aria-hidden="true" />
+          <div className="hero-measure" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+          </div>
         </div>
         <div className="hero-index" aria-label="Current Mile Group operating range">
           <span>CurrentMile.com</span>
@@ -132,10 +150,20 @@ export default function Home() {
           </p>
         </div>
 
+        <nav className="portfolio-baseline" aria-label="Portfolio index">
+          {portfolio.map((company, index) => (
+            <a href={`#company-${company.name.toLowerCase()}`} key={company.name}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <strong>{company.name}</strong>
+            </a>
+          ))}
+        </nav>
+
         <div className="portfolio-grid">
           {portfolio.map((company) => (
             <article
               className={`company-card${company.featured ? " featured" : ""}`}
+              id={`company-${company.name.toLowerCase()}`}
               key={company.name}
             >
               <span className="company-id">{company.id}</span>
