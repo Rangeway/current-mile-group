@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const sectors = [
   ["01", "Mobility", "How people move and where they stop."],
   ["02", "Energy", "The systems behind the transition."],
@@ -17,6 +15,8 @@ const portfolio = [
     href: "https://rangeway.co",
     image: "/images/rangeway-portfolio.webp",
     imageAlt: "Rangeway charging destination in a mountain landscape",
+    imageWidth: 640,
+    imageHeight: 360,
     logo: "/brands/rangeway-lockup.svg",
     logoWidth: 250,
     logoHeight: 58,
@@ -29,6 +29,8 @@ const portfolio = [
     href: "https://chargevia.net",
     image: "/images/chargevia-portfolio.jpg",
     imageAlt: "ChargeVia EV charging infrastructure",
+    imageWidth: 1760,
+    imageHeight: 982,
     logo: "/brands/chargevia-lockup.svg",
     logoWidth: 250,
     logoHeight: 58,
@@ -42,6 +44,8 @@ const portfolio = [
     image: "/images/ampiq-orchestration.png",
     imageAlt:
       "Project lead and electrical contractor coordinating a commercial EV charging deployment",
+    imageWidth: 1672,
+    imageHeight: 941,
     logo: "/brands/ampiq-logo.png",
     logoWidth: 250,
     logoHeight: 79,
@@ -136,15 +140,16 @@ export default function Home() {
             >
               <span className="company-id">{company.id}</span>
               <div className="company-image">
-                <Image
+                <img
                   src={company.image}
                   alt={company.imageAlt}
-                  fill
-                  sizes="(max-width: 760px) 100vw, 33vw"
+                  width={company.imageWidth}
+                  height={company.imageHeight}
+                  loading="lazy"
                 />
               </div>
               <div className="company-body">
-                <Image
+                <img
                   className={`company-logo ${company.name.toLowerCase()}`}
                   src={company.logo}
                   alt={`${company.name} wordmark`}

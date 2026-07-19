@@ -70,3 +70,11 @@ test("uses anchored navigation and has no contact form or folio rail", async () 
   assert.match(page, /const year = new Date\(\)\.getFullYear\(\)/);
   assert.match(page, /© \{year\} Current Mile Group/);
 });
+
+test("uses browser-native images so the local vinext preview has no image-service dependency", async () => {
+  const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+
+  assert.doesNotMatch(page, /from ["']next\/image["']/);
+  assert.doesNotMatch(page, /<Image\b/);
+  assert.match(page, /<img\b/);
+});
