@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Archivo, IBM_Plex_Mono } from "next/font/google";
+import { Archivo, IBM_Plex_Mono, Outfit } from "next/font/google";
 import "./globals.css";
 
 const archivo = Archivo({
@@ -14,15 +14,21 @@ const ibmPlexMono = IBM_Plex_Mono({
   weight: ["400", "500"],
 });
 
+const chargeVia = Outfit({
+  variable: "--font-chargevia",
+  subsets: ["latin"],
+  weight: "700",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://currentmile.com"),
   title: "Current Mile Group",
   description:
-    "A portfolio platform across mobility, energy, infrastructure, software, and hospitality.",
+    "A portfolio parent in development for companies working across mobility, energy, infrastructure, software, and hospitality.",
   openGraph: {
     title: "Current Mile Group",
     description:
-      "A portfolio built for the long road—across mobility, energy, infrastructure, software, and hospitality.",
+      "A strategic umbrella for Rangeway, ChargeVia by Rangeway, and AmpIQ. Different businesses. A shared perspective.",
     url: "https://currentmile.com",
     siteName: "Current Mile Group",
     type: "website",
@@ -39,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "Current Mile Group",
     description:
-      "A portfolio built for the long road—across mobility, energy, infrastructure, software, and hospitality.",
+      "A strategic umbrella for Rangeway, ChargeVia by Rangeway, and AmpIQ. Different businesses. A shared perspective.",
     images: ["/brand/cmg-social-512.png"],
   },
   icons: {
@@ -56,7 +62,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${archivo.variable} ${ibmPlexMono.variable}`}>
+      <body className={`${archivo.variable} ${ibmPlexMono.variable} ${chargeVia.variable}`}>
         {children}
       </body>
     </html>
