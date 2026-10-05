@@ -7,8 +7,8 @@ import ChargeViaLockup from "./chargevia-lockup";
 const portfolio = [
   {
     id: "01", slug: "rangeway", name: "Rangeway",
-    role: "Hospitality-driven EV charging",
-    headline: "The stop is the point.",
+    role: "Hospitality-Driven EV Charging",
+    headline: "The Stop Is the Point.",
     description: "Rangeway is building a hospitality-driven EV charging network, with destinations designed for the people making the journey.",
     detail: "Waystation, Basecamp, and Summit bring different levels of comfort and service to the same hospitality-first approach.",
     scope: ["Waystation", "Basecamp", "Summit"],
@@ -16,34 +16,34 @@ const portfolio = [
     image: "/images/rangeway-waystation.png",
     imageAlt: "Concept rendering of a Rangeway Waystation at dusk, with a glowing driver's lounge and timber charging canopy",
     imageWidth: 1672, imageHeight: 941,
-    caption: "Rangeway Waystation / Concept rendering",
+    caption: "Rangeway Waystation / Concept Rendering",
     logo: "/brands/rangeway-charcoal-amber.svg", logoWidth: 332, logoHeight: 72,
   },
   {
     id: "02", slug: "chargevia", name: "ChargeVia by Rangeway",
-    role: "Rangeway’s retail charging format",
-    headline: "Charging where people already stop.",
+    role: "Rangeway’s Retail Charging Format",
+    headline: "Charging Where People Already Stop.",
     description: "ChargeVia by Rangeway brings fast charging to existing retail and host properties, with Rangeway developing and managing the charging operation.",
     detail: "The host keeps running its business and provides the useful amenities. Rangeway handles the charging.",
-    scope: ["Retail locations", "Site hosts", "Rangeway-operated"],
+    scope: ["Retail Locations", "Site Hosts", "Rangeway-Operated"],
     href: "https://chargevia.net", domain: "chargevia.net",
     image: "/images/chargevia-retail.webp",
     imageAlt: "Concept rendering of orange ChargeVia chargers outside a cafe and retail property",
     imageWidth: 1672, imageHeight: 941,
-    caption: "ChargeVia retail host site / Concept rendering",
+    caption: "ChargeVia Retail Host Site / Concept Rendering",
   },
   {
     id: "03", slug: "ampiq", name: "AmpIQ",
-    role: "Independent EV charging advisory",
-    headline: "One partner for the whole project.",
+    role: "Independent EV Charging Advisory",
+    headline: "One Partner for the Whole Project.",
     description: "AmpIQ plans, coordinates, and oversees EV charging projects for property owners, from feasibility and procurement through delivery and ongoing management.",
     detail: "A hardware-agnostic orchestrator connecting equipment, contractors, utilities, incentives, and software around the needs of the property.",
-    scope: ["Advisory", "Project delivery", "Ongoing management"],
+    scope: ["Advisory", "Project Delivery", "Ongoing Management"],
     href: "https://ampiq.tech", domain: "ampiq.tech",
     image: "/images/ampiq-charging.webp",
     imageAlt: "An electric vehicle connected to a charger, an illustrative photograph from AmpIQ's website",
     imageWidth: 1120, imageHeight: 840,
-    caption: "AmpIQ / Illustrative charging photograph",
+    caption: "AmpIQ / Illustrative Charging Photograph",
     logo: "/brands/ampiq-current-logo.png", logoWidth: 861, logoHeight: 267,
   },
 ] as const;
@@ -61,15 +61,15 @@ export default function Home() {
     <main id="main">
       <section className="hero" aria-labelledby="hero-title">
         <p className="eyebrow">Current Mile Group</p>
-        <h1 id="hero-title">Different businesses.<br /><span>A shared perspective.</span></h1>
+        <h1 id="hero-title">Different Businesses.<br /><span>A Shared Perspective.</span></h1>
         <div className="hero-bottom">
           <p>A strategic umbrella for businesses in mobility, energy, infrastructure, software, and hospitality.</p>
-          <a className="text-link" href="#portfolio">Meet the businesses <span aria-hidden="true">↓</span></a>
+          <a className="text-link" href="#portfolio">Meet the Businesses <span aria-hidden="true">↓</span></a>
         </div>
       </section>
       <section className="portfolio-section" id="portfolio" aria-labelledby="portfolio-title">
         <div className="portfolio-intro">
-          <h2 id="portfolio-title">The portfolio</h2>
+          <h2 id="portfolio-title">The Portfolio</h2>
           <p>Rangeway. ChargeVia by Rangeway. AmpIQ.</p>
         </div>
         <div className="company-list">
@@ -102,14 +102,14 @@ export default function Home() {
           <img src="/brand/cmg-monogram-for-dark.png" alt="" aria-hidden="true" width="1024" height="1024" />
         </div>
         <div className="group-copy">
-          <p className="group-lede">The planned parent company for Rangeway and AmpIQ.</p>
-          <p>Rangeway and AmpIQ operate separately today. ChargeVia by Rangeway is Rangeway’s retail charging format, not a separate operating company.</p>
-          <p>The parent company has not yet been formed. Its scope will include mobility, energy, infrastructure, software, and hospitality.</p>
+          <p className="group-lede">Current Mile Group is the strategic umbrella for Rangeway and AmpIQ.</p>
+          <p>Rangeway and AmpIQ operate separately. ChargeVia by Rangeway is Rangeway’s retail charging format, not a separate operating company.</p>
+          <p>The group’s focus spans mobility, energy, infrastructure, software, and hospitality.</p>
           <ul className="sector-list" aria-label="Group sectors">{['Mobility', 'Energy', 'Infrastructure', 'Software', 'Hospitality'].map(sector => <li key={sector}>{sector}</li>)}</ul>
         </div>
       </section>
       <section className="contact-section" id="contact" aria-labelledby="contact-title">
-        <div><p className="eyebrow">Contact</p><h2 id="contact-title">Let’s talk.</h2></div>
+        <div><p className="eyebrow">Contact</p><h2 id="contact-title">Let’s Talk.</h2></div>
         <a className="contact-link" href="mailto:hello@currentmile.com">hello@currentmile.com <span aria-hidden="true">↗</span></a>
       </section>
     </main>

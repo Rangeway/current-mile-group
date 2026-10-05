@@ -24,11 +24,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://currentmile.com"),
   title: "Current Mile Group",
   description:
-    "A portfolio parent in development for companies working across mobility, energy, infrastructure, software, and hospitality.",
+    "Current Mile Group is a strategic umbrella for businesses in mobility, energy, infrastructure, software, and hospitality.",
   openGraph: {
     title: "Current Mile Group",
     description:
-      "A strategic umbrella for Rangeway, ChargeVia by Rangeway, and AmpIQ. Different businesses. A shared perspective.",
+      "A strategic umbrella for Rangeway, ChargeVia by Rangeway, and AmpIQ. Different Businesses. A Shared Perspective.",
     url: "https://currentmile.com",
     siteName: "Current Mile Group",
     type: "website",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "Current Mile Group",
     description:
-      "A strategic umbrella for Rangeway, ChargeVia by Rangeway, and AmpIQ. Different businesses. A shared perspective.",
+      "A strategic umbrella for Rangeway, ChargeVia by Rangeway, and AmpIQ. Different Businesses. A Shared Perspective.",
     images: ["/brand/cmg-social-512.png"],
   },
   icons: {

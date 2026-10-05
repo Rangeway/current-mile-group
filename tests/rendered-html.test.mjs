@@ -18,8 +18,8 @@ test("renders a concise portfolio page without the rejected decorative atlas", a
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
   const html = await response.text();
   assert.match(html, /<title>Current Mile Group<\/title>/i);
-  assert.match(html, /Different businesses\./);
-  assert.match(html, /A shared perspective\./);
+  assert.match(html, /Different Businesses\./);
+  assert.match(html, /A Shared Perspective\./);
   assert.doesNotMatch(html, /Operating atlas|37\.7749|122\.4194|Three operating companies|No artificial boundaries|Practical beats theoretical|route-line/);
 });
 
@@ -32,8 +32,9 @@ test("preserves current brand architecture and company positioning", async () =>
   assert.match(html, /AmpIQ plans, coordinates, and oversees EV charging projects for property owners/);
   assert.match(html, /delivery and ongoing management/);
   assert.match(html, /hardware-agnostic orchestrator/);
-  assert.match(html, /Rangeway and AmpIQ operate separately today/);
-  assert.match(html, /parent company has not yet been formed/);
+  assert.match(html, /Rangeway and AmpIQ operate separately\./);
+  assert.match(html, /Current Mile Group is the strategic umbrella for Rangeway and AmpIQ\./);
+  assert.doesNotMatch(html, /planned parent|in development|being developed|not yet been formed|scope will include/);
   assert.doesNotMatch(html, /infrastructure development for practical deployment|CMG \/ 0[123] \/ ACTIVE|ChargeVia LLC|Maggie|\$5M|135 kW/);
   for (const domain of ["rangeway.co", "chargevia.net", "ampiq.tech"]) {
     assert.ok(html.includes(`https://${domain}`));
@@ -61,8 +62,8 @@ test("uses single-page navigation, direct contact, and copyright-only footer", a
 test("uses local, browser-native imagery with honest captions", async () => {
   const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
   assert.doesNotMatch(page, /from ["']next\/image["']|<Image\b/);
-  assert.match(page, /Concept rendering/);
-  assert.match(page, /Illustrative charging photograph/);
+  assert.match(page, /Concept Rendering/);
+  assert.match(page, /Illustrative Charging Photograph/);
   for (const path of ["images/rangeway-waystation.png", "images/chargevia-retail.webp", "images/ampiq-charging.webp", "brands/ampiq-current-logo.png"]) {
     await access(new URL(`../public/${path}`, import.meta.url));
   }
@@ -107,9 +108,15 @@ test("uses the approved Rangeway master and the real ChargeVia lettering", async
   assert.doesNotMatch(html, /\/brands\/rangeway-lockup\.svg|\/brands\/chargevia-lockup\.svg/);
 });
 
-test("uses The Group capitalization and factual parent-company copy", async () => {
+test("uses consistent title case and factual parent-company copy", async () => {
   const html = await (await render()).text();
-  assert.match(html, /The Group/);
-  assert.match(html, /The planned parent company for Rangeway and AmpIQ\./);
-  assert.doesNotMatch(html, /The group|A broader view|Room to grow|long-term home for operating businesses|group’s scope extends beyond/);
+  for (const heading of ["The Portfolio", "The Group", "The Stop Is the Point.", "Charging Where People Already Stop.", "One Partner for the Whole Project.", "Let’s Talk."]) {
+    assert.ok(html.includes(heading), `Missing title-cased heading: ${heading}`);
+  }
+  for (const label of ["Meet the Businesses", "Hospitality-Driven EV Charging", "Rangeway’s Retail Charging Format", "Independent EV Charging Advisory", "Retail Locations", "Site Hosts", "Rangeway-Operated", "Project Delivery", "Ongoing Management", "Concept Rendering", "Illustrative Charging Photograph"]) {
+    assert.ok(html.includes(label), `Missing title-cased label: ${label}`);
+  }
+  assert.match(html, /Current Mile Group is the strategic umbrella for Rangeway and AmpIQ\./);
+  assert.doesNotMatch(html, /The planned parent company|>The (?:portfolio|group)</);
+  assert.doesNotMatch(html, /A broader view|Room to grow|long-term home for operating businesses|group’s scope extends beyond/);
 });

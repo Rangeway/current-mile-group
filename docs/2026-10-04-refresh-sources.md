@@ -38,3 +38,7 @@ The Rangeway site still contained older artwork. The authoritative September 7 b
 ChargeVia's official light-background SVG at `Rangeway/Redwood Mobility/ChargeVia/logopack/lockup.svg` uses live Outfit Bold lettering. External SVG images cannot load the page's font, so `app/chargevia-lockup.tsx` preserves that artwork inline with locally served Outfit 700. The Rangeway endorsement uses the current integrated master, not substitute text.
 
 Zak changed the public website address to `hello@currentmile.com` and requested plain factual copy under the title-cased `The Group`. The personal email signature is a separate artifact and is not changed by this request.
+
+## October 5 copy correction
+
+Zak confirmed that CMG is active and requested present-tense copy. The site describes CMG as the strategic umbrella for Rangeway and AmpIQ, removes development/future-tense language, and does not assert equity ownership or legal formation. Headings and standalone labels use title case throughout; body copy remains sentence case and official brand names retain their styling.

@@ -10,7 +10,7 @@ People looking up Current Mile Group after encountering its name or an email add
 
 ## Product Purpose
 
-A public, single-page introduction to a strategic umbrella and intended portfolio parent. The legal formation and ownership status remain unchanged: do not imply that CMG has already been formed or owns the businesses. Rangeway and AmpIQ are distinct businesses. ChargeVia by Rangeway is Rangeway's retail host-site charging format, not a third independent company.
+A public, single-page introduction to Current Mile Group, an active strategic umbrella and intended portfolio parent. Zak confirmed on October 5 that CMG is active and should be described in the present tense. This does not establish legal formation or equity ownership; do not infer either from its operating status. Rangeway and AmpIQ are distinct businesses. ChargeVia by Rangeway is Rangeway's retail host-site charging format, not a third independent company.
 
 ## Brand Personality
 
@@ -28,6 +28,7 @@ Decorative maps, invented coordinates, pseudo-technical diagrams, generic invest
 4. Keep pipeline, partners, funding, and unformed legal structures out of public copy.
 5. Present concept imagery as concepts, not evidence of operating sites.
 6. Keep the page concise, with anchored navigation, direct email contact, and a copyright-only footer.
+7. Use title case for headings, navigation, calls to action, and standalone labels; use sentence case for body copy and descriptive image alternatives. Preserve official brand styling, including ChargeVia by Rangeway and AmpIQ.
 
 ## Accessibility & Inclusion
 
