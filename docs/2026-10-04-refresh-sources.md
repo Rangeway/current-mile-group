@@ -50,3 +50,7 @@ Replace the generic Group introduction with a fuller explanation of Rangeway’s
 ### Wider CMG remit
 
 Zak clarified that the description should explain CMG itself through the five sector keywords: mobility, energy, infrastructure, software, and hospitality. The revised copy describes strategic direction and new business ideas across those fields, including businesses in their own right rather than only support functions for EV charging. Rangeway and AmpIQ remain the current portfolio, with ChargeVia by Rangeway as Rangeway’s retail charging format. Search and sharing descriptions reflect this broader remit without claiming additional active businesses or changing equity-ownership disclosures.
+
+### External collaboration
+
+Zak rejected the closing portfolio recap and clarified that CMG is open to working with other companies across all five disciplines. Replace that recap with a direct invitation to collaborate and remove the internal-only wording from the earlier strategic-direction sentence. Keep individual company relationships in the Portfolio section. Search and sharing descriptions reflect the same external-collaboration positioning.

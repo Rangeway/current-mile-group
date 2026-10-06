@@ -24,11 +24,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://currentmile.com"),
   title: "Current Mile Group",
   description:
-    "Current Mile Group is a founder-led business group working across mobility, energy, infrastructure, software, and hospitality, with Rangeway and AmpIQ in its portfolio.",
+    "A founder-led business group working across mobility, energy, infrastructure, software, and hospitality, open to collaboration with companies across all five disciplines.",
   openGraph: {
     title: "Current Mile Group",
     description:
-      "A founder-led business group providing strategic direction and developing business ideas across mobility, energy, infrastructure, software, and hospitality.",
+      "A founder-led business group working across mobility, energy, infrastructure, software, and hospitality, open to collaboration with companies across all five disciplines.",
     url: "https://currentmile.com",
     siteName: "Current Mile Group",
     type: "website",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "Current Mile Group",
     description:
-      "A founder-led business group providing strategic direction and developing business ideas across mobility, energy, infrastructure, software, and hospitality.",
+      "A founder-led business group working across mobility, energy, infrastructure, software, and hospitality, open to collaboration with companies across all five disciplines.",
     images: ["/brand/cmg-social-512.png"],
   },
   icons: {

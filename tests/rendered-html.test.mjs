@@ -28,11 +28,10 @@ test("preserves current brand architecture and company positioning", async () =>
   assert.match(html, /Rangeway is building a hospitality-driven EV charging network/);
   for (const format of ["Waystation", "Basecamp", "Summit"]) assert.match(html, new RegExp(format));
   assert.match(html, /ChargeVia by Rangeway brings fast charging to existing retail and host properties/);
-  assert.match(html, /ChargeVia by Rangeway as Rangeway’s retail charging format/);
+  assert.match(html, /Rangeway’s Retail Charging Format/);
   assert.match(html, /AmpIQ plans, coordinates, and oversees EV charging projects for property owners/);
   assert.match(html, /delivery and ongoing management/);
   assert.match(html, /hardware-agnostic orchestrator/);
-  assert.match(html, /Rangeway and AmpIQ operate separately, with their own brands and responsibilities\./);
   assert.match(html, /Current Mile Group is a founder-led business group working across mobility, energy, infrastructure, software, and hospitality/);
   assert.doesNotMatch(html, /planned parent|in development|being developed|not yet been formed|scope will include/);
   assert.doesNotMatch(html, /infrastructure development for practical deployment|CMG \/ 0[123] \/ ACTIVE|ChargeVia LLC|Maggie|\$5M|135 kW/);
@@ -126,19 +125,20 @@ test("explains CMG across all five fields without reducing the group to EV charg
   const group = html.match(/<section class="group-section"[\s\S]*?<\/section>/)?.[0];
   assert.ok(group);
   assert.match(group, /founder-led business group working across mobility, energy, infrastructure, software, and hospitality/);
-  assert.match(group, /CMG provides strategic direction for its businesses and develops ideas for what comes next/);
+  assert.match(group, /CMG provides strategic direction and develops ideas for businesses and projects/);
   assert.match(group, /transportation and travel, energy systems, physical assets, software businesses, and hospitality/);
   assert.match(group, /standalone software business, an energy project, or a hospitality concept/);
-  assert.match(group, /ChargeVia by Rangeway as Rangeway’s retail charging format/);
-  assert.match(group, /Rangeway and AmpIQ operate separately, with their own brands and responsibilities/);
-  assert.match(group, /Their work in EV charging is part of CMG’s scope; it does not define the whole group/);
+  assert.match(group, /We’re open to working with companies across mobility, energy, infrastructure, software, and hospitality/);
+  assert.match(group, /If you’re building a business, developing a project, or looking for a partner in one of these fields, get in touch/);
+  assert.doesNotMatch(group, /for its businesses|Rangeway|AmpIQ|ChargeVia|EV charging/);
   assert.doesNotMatch(group, /strategic umbrella|group’s focus spans/);
   const paragraphs = [...group.matchAll(/<p(?: [^>]*)?>([\s\S]*?)<\/p>/g)].map(match => match[1].replace(/<[^>]+>/g, ""));
   const wordCount = paragraphs.slice(1).join(" ").split(/\s+/).length;
-  assert.ok(wordCount >= 130 && wordCount <= 180, `Group copy should explain the wider remit concisely, got ${wordCount} words`);
+  assert.ok(wordCount >= 120 && wordCount <= 180, `Group copy should explain the wider remit concisely, got ${wordCount} words`);
   const descriptions = [...html.matchAll(/<meta[^>]+(?:name="description"|property="og:description"|name="twitter:description")[^>]+content="([^"]+)"/g)];
   assert.equal(descriptions.length, 3, "Search and both social descriptions must be checked");
   for (const description of descriptions) {
     assert.match(description[1], /mobility, energy, infrastructure, software, and hospitality/);
+    assert.match(description[1], /open to collaboration with companies across all five disciplines/);
   }
 });

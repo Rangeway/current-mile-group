@@ -103,9 +103,9 @@ export default function Home() {
         </div>
         <div className="group-copy">
           <p className="group-lede">Current Mile Group is a founder-led business group working across mobility, energy, infrastructure, software, and hospitality.</p>
-          <p>CMG provides strategic direction for its businesses and develops ideas for what comes next. That means looking beyond individual projects: how people travel, how places are powered and built, the software used to run them, and the services and experiences those places offer.</p>
+          <p>CMG provides strategic direction and develops ideas for businesses and projects. Our work spans how people travel, how places are powered and built, the software used to run them, and the services and experiences those places offer.</p>
           <p>Our interests include transportation and travel, energy systems, physical assets, software businesses, and hospitality. The group has room for a standalone software business, an energy project, or a hospitality concept, as well as businesses that combine several of these fields.</p>
-          <p>Rangeway and AmpIQ are the group’s current businesses, with ChargeVia by Rangeway as Rangeway’s retail charging format. Rangeway and AmpIQ operate separately, with their own brands and responsibilities. Their work in EV charging is part of CMG’s scope; it does not define the whole group.</p>
+          <p>We’re open to working with companies across mobility, energy, infrastructure, software, and hospitality. If you’re building a business, developing a project, or looking for a partner in one of these fields, get in touch.</p>
           <ul className="sector-list" aria-label="Group sectors">{['Mobility', 'Energy', 'Infrastructure', 'Software', 'Hospitality'].map(sector => <li key={sector}>{sector}</li>)}</ul>
         </div>
       </section>
