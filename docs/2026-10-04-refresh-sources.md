@@ -42,3 +42,7 @@ Zak changed the public website address to `hello@currentmile.com` and requested 
 ## October 5 copy correction
 
 Zak confirmed that CMG is active and requested present-tense copy. The site describes CMG as the strategic umbrella for Rangeway and AmpIQ, removes development/future-tense language, and does not assert equity ownership or legal formation. Headings and standalone labels use title case throughout; body copy remains sentence case and official brand names retain their styling.
+
+## October 6 Group copy
+
+Replace the generic Group introduction with a fuller explanation of Rangeway’s charging network, ChargeVia by Rangeway’s retail host format, AmpIQ’s property-owner advisory and management work, and CMG’s founder-led direction. Keep the businesses’ separate operating roles clear. Search and sharing descriptions follow the same concrete framing. This copy does not assert current site openings, equity ownership, shared services, partners, or fundraising activity.
