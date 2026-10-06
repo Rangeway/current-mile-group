@@ -63,7 +63,7 @@ export default function Home() {
         <p className="eyebrow">Current Mile Group</p>
         <h1 id="hero-title">Different Businesses.<br /><span>A Shared Perspective.</span></h1>
         <div className="hero-bottom">
-          <p>A strategic umbrella for businesses in mobility, energy, infrastructure, software, and hospitality.</p>
+          <p>A parent group working across mobility, energy, infrastructure, software, and hospitality.</p>
           <a className="text-link" href="#portfolio">Meet the Businesses <span aria-hidden="true">↓</span></a>
         </div>
       </section>
@@ -102,8 +102,10 @@ export default function Home() {
           <img src="/brand/cmg-monogram-for-dark.png" alt="" aria-hidden="true" width="1024" height="1024" />
         </div>
         <div className="group-copy">
-          <p className="group-lede">Current Mile Group is a founder-led business group working across mobility, energy, infrastructure, software, and hospitality.</p>
-          <p>CMG provides business strategy and project development, with work spanning software, operations, and customer experience. We develop business models, plan infrastructure projects, define software products, and shape hospitality concepts.</p>
+          <p className="group-lede">Current Mile Group is the parent group for Rangeway and AmpIQ, working across mobility, energy, infrastructure, software, and hospitality.</p>
+          <p>CMG provides strategic direction for its portfolio and works with founders, operators, and property owners on business development, project delivery, and operations. We bring the experience behind our businesses together with a network of specialist partners to develop business models, plan projects, and coordinate the work needed to deliver them.</p>
+          <p>For charging businesses, that work covers feasibility, site planning, equipment and software requirements, project coordination, and ongoing management. In hospitality, we develop the service model, amenities, guest experience, and operating plan. Software work focuses on product requirements, workflows, and the systems a business needs to run.</p>
+          <p>CMG assembles the team for each engagement, defines the scope of work, and coordinates delivery across disciplines. Clients work through CMG on a specific assignment or a broader business or development project, with the relevant partners contributing their expertise throughout the engagement.</p>
           <ul className="sector-list" aria-label="Group sectors">{['Mobility', 'Energy', 'Infrastructure', 'Software', 'Hospitality'].map(sector => <li key={sector}>{sector}</li>)}</ul>
         </div>
       </section>

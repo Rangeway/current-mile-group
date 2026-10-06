@@ -32,7 +32,7 @@ test("preserves current brand architecture and company positioning", async () =>
   assert.match(html, /AmpIQ plans, coordinates, and oversees EV charging projects for property owners/);
   assert.match(html, /delivery and ongoing management/);
   assert.match(html, /hardware-agnostic orchestrator/);
-  assert.match(html, /Current Mile Group is a founder-led business group working across mobility, energy, infrastructure, software, and hospitality/);
+  assert.match(html, /Current Mile Group is the parent group for Rangeway and AmpIQ, working across mobility, energy, infrastructure, software, and hospitality/);
   assert.doesNotMatch(html, /planned parent|in development|being developed|not yet been formed|scope will include/);
   assert.doesNotMatch(html, /infrastructure development for practical deployment|CMG \/ 0[123] \/ ACTIVE|ChargeVia LLC|Maggie|\$5M|135 kW/);
   for (const domain of ["rangeway.co", "chargevia.net", "ampiq.tech"]) {
@@ -115,28 +115,33 @@ test("uses consistent title case and factual parent-company copy", async () => {
   for (const label of ["Meet the Businesses", "Hospitality-Driven EV Charging", "Rangeway’s Retail Charging Format", "Independent EV Charging Advisory", "Retail Locations", "Site Hosts", "Rangeway-Operated", "Project Delivery", "Ongoing Management", "Concept Rendering", "Illustrative Charging Photograph"]) {
     assert.ok(html.includes(label), `Missing title-cased label: ${label}`);
   }
-  assert.match(html, /Current Mile Group is a founder-led business group working across mobility, energy, infrastructure, software, and hospitality/);
+  assert.match(html, /Current Mile Group is the parent group for Rangeway and AmpIQ, working across mobility, energy, infrastructure, software, and hospitality/);
   assert.doesNotMatch(html, /The planned parent company|>The (?:portfolio|group)</);
   assert.doesNotMatch(html, /A broader view|Room to grow|long-term home for operating businesses|group’s scope extends beyond/);
 });
 
-test("explains CMG across all five fields without reducing the group to EV charging", async () => {
+test("preserves the approved expanded parent-group and project-delivery description", async () => {
   const html = await (await render()).text();
   const group = html.match(/<section class="group-section"[\s\S]*?<\/section>/)?.[0];
   assert.ok(group);
-  assert.match(group, /founder-led business group working across mobility, energy, infrastructure, software, and hospitality/);
-  assert.match(group, /CMG provides business strategy and project development, with work spanning software, operations, and customer experience/);
-  assert.match(group, /We develop business models, plan infrastructure projects, define software products, and shape hospitality concepts/);
+  assert.match(html, /A parent group working across mobility, energy, infrastructure, software, and hospitality/);
+  const approvedCopy = [
+    "Current Mile Group is the parent group for Rangeway and AmpIQ, working across mobility, energy, infrastructure, software, and hospitality.",
+    "CMG provides strategic direction for its portfolio and works with founders, operators, and property owners on business development, project delivery, and operations. We bring the experience behind our businesses together with a network of specialist partners to develop business models, plan projects, and coordinate the work needed to deliver them.",
+    "For charging businesses, that work covers feasibility, site planning, equipment and software requirements, project coordination, and ongoing management. In hospitality, we develop the service model, amenities, guest experience, and operating plan. Software work focuses on product requirements, workflows, and the systems a business needs to run.",
+    "CMG assembles the team for each engagement, defines the scope of work, and coordinates delivery across disciplines. Clients work through CMG on a specific assignment or a broader business or development project, with the relevant partners contributing their expertise throughout the engagement.",
+  ];
   assert.doesNotMatch(group, /We’re open|willing to work|If you’re building|looking for a partner|The scope depends on the project/);
-  assert.doesNotMatch(group, /for its businesses|Rangeway|AmpIQ|ChargeVia|EV charging/);
+  assert.doesNotMatch(group, /wholly owned|equity ownership|subsidiaries|our clients include|ChargeVia/);
   assert.doesNotMatch(group, /strategic umbrella|group’s focus spans|Our interests include|The group has room|standalone software business|That can mean/);
   const paragraphs = [...group.matchAll(/<p(?: [^>]*)?>([\s\S]*?)<\/p>/g)].map(match => match[1].replace(/<[^>]+>/g, ""));
-  assert.equal(paragraphs.length, 3, "Use the section label, group introduction, and one concrete body paragraph without overlapping explanations");
+  assert.deepEqual(paragraphs, ["The Group", ...approvedCopy], "Publish the exact four-paragraph wording approved by Zak");
+  assert.doesNotMatch(html, /consulting/i);
   const descriptions = [...html.matchAll(/<meta[^>]+(?:name="description"|property="og:description"|name="twitter:description")[^>]+content="([^"]+)"/g)];
   assert.equal(descriptions.length, 3, "Search and both social descriptions must be checked");
   for (const description of descriptions) {
     assert.match(description[1], /mobility, energy, infrastructure, software, and hospitality/);
-    assert.match(description[1], /business strategy and project development/);
+    assert.match(description[1], /Parent group for Rangeway and AmpIQ\. Business development, project delivery, and operations/);
     assert.doesNotMatch(description[1], /open to collaboration|willing to work/);
   }
 });

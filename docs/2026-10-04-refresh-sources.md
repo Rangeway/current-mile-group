@@ -58,3 +58,7 @@ Zak rejected the closing portfolio recap and clarified that CMG’s work extends
 ### Direct description of CMG’s work
 
 Zak also rejected “Our interests include” and “The group has room” as hypothetical, generic language. Remove that paragraph and consolidate the overlapping explanations into a direct description of business strategy, project development, software, operations, and customer experience. Retain the five-sector introduction, use active descriptions of the work, and do not impose a minimum word count that encourages filler.
+
+### Parent group and external project work
+
+Zak clarified that CMG combines parent-group direction for Rangeway and AmpIQ with work for outside clients, bringing the experience behind those businesses together with a network of specialist partners. He then rejected consulting as the defining label and approved the four-paragraph description focused on parent identity, business development, project delivery, and operations. Preserve that exact approved copy in The Group. It includes charging-business development, hospitality, software, and the way CMG assembles partners and coordinates engagements. Keep the general network unnamed and do not disclose prospective assignments or treat the parent-group positioning as confirmation of completed legal formation or equity transfers. Removing filler must not reduce the expanded description to a short summary. Hero, search, and sharing descriptions reflect the parent-group identity without introducing a consulting-practice label.
