@@ -24,11 +24,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://currentmile.com"),
   title: "Current Mile Group",
   description:
-    "A founder-led business group working across mobility, energy, infrastructure, software, and hospitality, open to collaboration with companies across all five disciplines.",
+    "Current Mile Group works across mobility, energy, infrastructure, software, and hospitality, bringing business strategy and project development to businesses and projects.",
   openGraph: {
     title: "Current Mile Group",
     description:
-      "A founder-led business group working across mobility, energy, infrastructure, software, and hospitality, open to collaboration with companies across all five disciplines.",
+      "Current Mile Group works across mobility, energy, infrastructure, software, and hospitality, bringing business strategy and project development to businesses and projects.",
     url: "https://currentmile.com",
     siteName: "Current Mile Group",
     type: "website",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "Current Mile Group",
     description:
-      "A founder-led business group working across mobility, energy, infrastructure, software, and hospitality, open to collaboration with companies across all five disciplines.",
+      "Current Mile Group works across mobility, energy, infrastructure, software, and hospitality, bringing business strategy and project development to businesses and projects.",
     images: ["/brand/cmg-social-512.png"],
   },
   icons: {

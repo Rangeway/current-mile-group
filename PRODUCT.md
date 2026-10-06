@@ -30,7 +30,7 @@ Decorative maps, invented coordinates, pseudo-technical diagrams, generic invest
 6. Keep the page concise, with anchored navigation, direct email contact, and a copyright-only footer.
 7. Use title case for headings, navigation, calls to action, and standalone labels; use sentence case for body copy and descriptive image alternatives. Preserve official brand styling, including ChargeVia by Rangeway and AmpIQ.
 8. Describe CMG at the group level across mobility, energy, infrastructure, software, and hospitality. Those fields can include businesses in their own right; do not limit CMG to EV charging or treat every field as a support function for a charging site. Distinguish this wider remit from the current portfolio without inventing additional operating businesses.
-9. CMG is open to working with other companies across all five disciplines. Do not frame its work as exclusively internal to the portfolio. Keep the Group description focused on CMG and collaboration; the Portfolio section already explains the individual brands.
+9. CMG’s work is not exclusively internal to the portfolio. Describe the work across all five disciplines without an explicit announcement that CMG is open or willing to work with other companies. Keep the Group description focused on CMG’s work; the Portfolio section already explains the individual brands.
 
 ## Accessibility & Inclusion
 

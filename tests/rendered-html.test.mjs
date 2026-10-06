@@ -128,8 +128,9 @@ test("explains CMG across all five fields without reducing the group to EV charg
   assert.match(group, /CMG provides strategic direction and develops ideas for businesses and projects/);
   assert.match(group, /transportation and travel, energy systems, physical assets, software businesses, and hospitality/);
   assert.match(group, /standalone software business, an energy project, or a hospitality concept/);
-  assert.match(group, /We’re open to working with companies across mobility, energy, infrastructure, software, and hospitality/);
-  assert.match(group, /If you’re building a business, developing a project, or looking for a partner in one of these fields, get in touch/);
+  assert.match(group, /CMG’s work spans business strategy, project development, software, operations, and the customer experience/);
+  assert.match(group, /shaping a new business, planning an infrastructure project, defining a software product, or developing a hospitality concept/);
+  assert.doesNotMatch(group, /We’re open|willing to work|If you’re building|looking for a partner|The scope depends on the project/);
   assert.doesNotMatch(group, /for its businesses|Rangeway|AmpIQ|ChargeVia|EV charging/);
   assert.doesNotMatch(group, /strategic umbrella|group’s focus spans/);
   const paragraphs = [...group.matchAll(/<p(?: [^>]*)?>([\s\S]*?)<\/p>/g)].map(match => match[1].replace(/<[^>]+>/g, ""));
@@ -139,6 +140,7 @@ test("explains CMG across all five fields without reducing the group to EV charg
   assert.equal(descriptions.length, 3, "Search and both social descriptions must be checked");
   for (const description of descriptions) {
     assert.match(description[1], /mobility, energy, infrastructure, software, and hospitality/);
-    assert.match(description[1], /open to collaboration with companies across all five disciplines/);
+    assert.match(description[1], /business strategy and project development/);
+    assert.doesNotMatch(description[1], /open to collaboration|willing to work/);
   }
 });
