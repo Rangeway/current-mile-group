@@ -46,3 +46,7 @@ Zak confirmed that CMG is active and requested present-tense copy. The site desc
 ## October 6 Group copy
 
 Replace the generic Group introduction with a fuller explanation of Rangeway’s charging network, ChargeVia by Rangeway’s retail host format, AmpIQ’s property-owner advisory and management work, and CMG’s founder-led direction. Keep the businesses’ separate operating roles clear. Search and sharing descriptions follow the same concrete framing. This copy does not assert current site openings, equity ownership, shared services, partners, or fundraising activity.
+
+### Wider CMG remit
+
+Zak clarified that the description should explain CMG itself through the five sector keywords: mobility, energy, infrastructure, software, and hospitality. The revised copy describes strategic direction and new business ideas across those fields, including businesses in their own right rather than only support functions for EV charging. Rangeway and AmpIQ remain the current portfolio, with ChargeVia by Rangeway as Rangeway’s retail charging format. Search and sharing descriptions reflect this broader remit without claiming additional active businesses or changing equity-ownership disclosures.
