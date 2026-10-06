@@ -125,17 +125,13 @@ test("explains CMG across all five fields without reducing the group to EV charg
   const group = html.match(/<section class="group-section"[\s\S]*?<\/section>/)?.[0];
   assert.ok(group);
   assert.match(group, /founder-led business group working across mobility, energy, infrastructure, software, and hospitality/);
-  assert.match(group, /CMG provides strategic direction and develops ideas for businesses and projects/);
-  assert.match(group, /transportation and travel, energy systems, physical assets, software businesses, and hospitality/);
-  assert.match(group, /standalone software business, an energy project, or a hospitality concept/);
-  assert.match(group, /CMG’s work spans business strategy, project development, software, operations, and the customer experience/);
-  assert.match(group, /shaping a new business, planning an infrastructure project, defining a software product, or developing a hospitality concept/);
+  assert.match(group, /CMG provides business strategy and project development, with work spanning software, operations, and customer experience/);
+  assert.match(group, /We develop business models, plan infrastructure projects, define software products, and shape hospitality concepts/);
   assert.doesNotMatch(group, /We’re open|willing to work|If you’re building|looking for a partner|The scope depends on the project/);
   assert.doesNotMatch(group, /for its businesses|Rangeway|AmpIQ|ChargeVia|EV charging/);
-  assert.doesNotMatch(group, /strategic umbrella|group’s focus spans/);
+  assert.doesNotMatch(group, /strategic umbrella|group’s focus spans|Our interests include|The group has room|standalone software business|That can mean/);
   const paragraphs = [...group.matchAll(/<p(?: [^>]*)?>([\s\S]*?)<\/p>/g)].map(match => match[1].replace(/<[^>]+>/g, ""));
-  const wordCount = paragraphs.slice(1).join(" ").split(/\s+/).length;
-  assert.ok(wordCount >= 120 && wordCount <= 180, `Group copy should explain the wider remit concisely, got ${wordCount} words`);
+  assert.equal(paragraphs.length, 3, "Use the section label, group introduction, and one concrete body paragraph without overlapping explanations");
   const descriptions = [...html.matchAll(/<meta[^>]+(?:name="description"|property="og:description"|name="twitter:description")[^>]+content="([^"]+)"/g)];
   assert.equal(descriptions.length, 3, "Search and both social descriptions must be checked");
   for (const description of descriptions) {

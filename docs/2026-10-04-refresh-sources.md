@@ -54,3 +54,7 @@ Zak clarified that the description should explain CMG itself through the five se
 ### External collaboration
 
 Zak rejected the closing portfolio recap and clarified that CMG’s work extends to other companies across all five disciplines. He then rejected an explicit “we’re open to working with companies” invitation: describe the actual work instead. The closing paragraph covers business strategy, project development, software, operations, and customer experience, with examples of business, infrastructure, software, and hospitality work. Remove internal-only wording from the earlier strategic-direction sentence and keep individual company relationships in the Portfolio section. Search and sharing descriptions explain the work without an explicit collaboration announcement.
+
+### Direct description of CMG’s work
+
+Zak also rejected “Our interests include” and “The group has room” as hypothetical, generic language. Remove that paragraph and consolidate the overlapping explanations into a direct description of business strategy, project development, software, operations, and customer experience. Retain the five-sector introduction, use active descriptions of the work, and do not impose a minimum word count that encourages filler.

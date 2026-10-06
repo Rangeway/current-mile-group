@@ -103,9 +103,7 @@ export default function Home() {
         </div>
         <div className="group-copy">
           <p className="group-lede">Current Mile Group is a founder-led business group working across mobility, energy, infrastructure, software, and hospitality.</p>
-          <p>CMG provides strategic direction and develops ideas for businesses and projects. Our work spans how people travel, how places are powered and built, the software used to run them, and the services and experiences those places offer.</p>
-          <p>Our interests include transportation and travel, energy systems, physical assets, software businesses, and hospitality. The group has room for a standalone software business, an energy project, or a hospitality concept, as well as businesses that combine several of these fields.</p>
-          <p>CMG’s work spans business strategy, project development, software, operations, and the customer experience. That can mean shaping a new business, planning an infrastructure project, defining a software product, or developing a hospitality concept.</p>
+          <p>CMG provides business strategy and project development, with work spanning software, operations, and customer experience. We develop business models, plan infrastructure projects, define software products, and shape hospitality concepts.</p>
           <ul className="sector-list" aria-label="Group sectors">{['Mobility', 'Energy', 'Infrastructure', 'Software', 'Hospitality'].map(sector => <li key={sector}>{sector}</li>)}</ul>
         </div>
       </section>
