@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { createElement } from "react";
 import { Archivo, IBM_Plex_Mono, Outfit } from "next/font/google";
 import "./globals.css";
 
@@ -68,14 +67,6 @@ export default function RootLayout({
       </head>
       <body className={`${archivo.variable} ${ibmPlexMono.variable} ${chargeVia.variable}`}>
         {children}
-        {createElement("elevenlabs-convai", {
-          "agent-id": "agent_3901m4krec3rex786chxz9hsgadb",
-        })}
-        <script
-          src="https://unpkg.com/@elevenlabs/convai-widget-embed"
-          async
-          type="text/javascript"
-        />
       </body>
     </html>
   );

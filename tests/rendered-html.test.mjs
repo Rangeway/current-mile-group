@@ -12,16 +12,13 @@ async function render() {
   }, { waitUntil() {}, passThroughOnException() {} });
 }
 
-test("embeds the requested ElevenLabs agent once with its asynchronous loader", async () => {
+test("does not load the removed Reception.ai widget or ElevenLabs embed", async () => {
   const html = await (await render()).text();
-  const widgets = [...html.matchAll(/<elevenlabs-convai\b[^>]*>/g)];
-  assert.equal(widgets.length, 1, "the page must include exactly one voice widget");
-  assert.match(widgets[0][0], /agent-id="agent_3901m4krec3rex786chxz9hsgadb"/);
-  const loaders = [...html.matchAll(/<script\b[^>]*src="https:\/\/unpkg\.com\/@elevenlabs\/convai-widget-embed"[^>]*>/g)];
-  assert.equal(loaders.length, 1, "the widget loader must appear exactly once");
-  assert.match(loaders[0][0], /\basync(?:="")?(?=[\s>])/);
-  assert.match(loaders[0][0], /type="text\/javascript"/);
-  assert.doesNotMatch(html.match(/<footer>([\s\S]*?)<\/footer>/)?.[1] ?? "", /elevenlabs-convai/);
+  const layout = await readFile(new URL("../app/layout.tsx", import.meta.url), "utf8");
+  for (const removed of ["elevenlabs-convai", "convai-widget-embed", "agent_3901m4krec3rex786chxz9hsgadb"]) {
+    assert.equal(html.includes(removed), false, `${removed} must not appear in the rendered page`);
+    assert.equal(layout.includes(removed), false, `${removed} must not appear in the layout`);
+  }
 });
 
 test("loads the requested Tinylytics script once in the document head", async () => {
