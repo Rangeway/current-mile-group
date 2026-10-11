@@ -12,6 +12,18 @@ async function render() {
   }, { waitUntil() {}, passThroughOnException() {} });
 }
 
+test("embeds the requested ElevenLabs agent once with its asynchronous loader", async () => {
+  const html = await (await render()).text();
+  const widgets = [...html.matchAll(/<elevenlabs-convai\b[^>]*>/g)];
+  assert.equal(widgets.length, 1, "the page must include exactly one voice widget");
+  assert.match(widgets[0][0], /agent-id="agent_3901m4krec3rex786chxz9hsgadb"/);
+  const loaders = [...html.matchAll(/<script\b[^>]*src="https:\/\/unpkg\.com\/@elevenlabs\/convai-widget-embed"[^>]*>/g)];
+  assert.equal(loaders.length, 1, "the widget loader must appear exactly once");
+  assert.match(loaders[0][0], /\basync(?:="")?(?=[\s>])/);
+  assert.match(loaders[0][0], /type="text\/javascript"/);
+  assert.doesNotMatch(html.match(/<footer>([\s\S]*?)<\/footer>/)?.[1] ?? "", /elevenlabs-convai/);
+});
+
 test("renders a concise portfolio page without the rejected decorative atlas", async () => {
   const response = await render();
   assert.equal(response.status, 200);
