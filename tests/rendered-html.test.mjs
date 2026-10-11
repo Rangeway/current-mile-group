@@ -24,6 +24,22 @@ test("embeds the requested ElevenLabs agent once with its asynchronous loader", 
   assert.doesNotMatch(html.match(/<footer>([\s\S]*?)<\/footer>/)?.[1] ?? "", /elevenlabs-convai/);
 });
 
+test("loads the requested Tinylytics script once in the document head", async () => {
+  const html = await (await render()).text();
+  const head = html.match(/<head>([\s\S]*?)<\/head>/)?.[1] ?? "";
+  const loaders = [...head.matchAll(/<script\b[^>]*src="https:\/\/tinylytics\.app\/embed\/otUjXsEWLjAmxqYxSXbq\.js"[^>]*>/g)];
+  assert.equal(loaders.length, 1, "the analytics script must appear in the head exactly once");
+  assert.match(loaders[0][0], /\bdefer(?:="")?(?=[\s>])/);
+  assert.equal([...html.matchAll(/src="https:\/\/tinylytics\.app\/embed\/otUjXsEWLjAmxqYxSXbq\.js"/g)].length, 1);
+});
+
+test("keeps the portfolio introduction to its heading without repeating company names", async () => {
+  const html = await (await render()).text();
+  const intro = html.match(/<div class="portfolio-intro">([\s\S]*?)<\/div>/)?.[1] ?? "";
+  assert.match(intro, /<h2 id="portfolio-title">The Portfolio<\/h2>/);
+  assert.doesNotMatch(intro, /<p\b|Rangeway|ChargeVia|AmpIQ/);
+});
+
 test("renders a concise portfolio page without the rejected decorative atlas", async () => {
   const response = await render();
   assert.equal(response.status, 200);

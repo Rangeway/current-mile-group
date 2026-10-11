@@ -63,6 +63,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script src="https://tinylytics.app/embed/otUjXsEWLjAmxqYxSXbq.js" defer />
+      </head>
       <body className={`${archivo.variable} ${ibmPlexMono.variable} ${chargeVia.variable}`}>
         {children}
         {createElement("elevenlabs-convai", {

@@ -70,7 +70,6 @@ export default function Home() {
       <section className="portfolio-section" id="portfolio" aria-labelledby="portfolio-title">
         <div className="portfolio-intro">
           <h2 id="portfolio-title">The Portfolio</h2>
-          <p>Rangeway. ChargeVia by Rangeway. AmpIQ.</p>
         </div>
         <div className="company-list">
           {portfolio.map((company) => <article className={`company company-${company.slug}`} key={company.slug} aria-labelledby={`${company.slug}-title`}>
